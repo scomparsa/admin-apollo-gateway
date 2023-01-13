@@ -1,0 +1,68 @@
+[
+  {
+    "name": "登录服务",
+    "projectName": "admin-login-service",
+    "port": "7002"
+  },
+  {
+    "name": "帐户服务",
+    "projectName": "admin-account-service",
+    "port": "7003"
+  },
+  {
+    "name": "国内数据服务",
+    "projectName": "admin-internal-data-service",
+    "port": "7004"
+  },
+  {
+    "name": "国内广告服务",
+    "projectName": "admin-internal-ad-service",
+    "port": "7005"
+  },
+  {
+    "name": "运营服务",
+    "projectName": "admin-op-service",
+    "port": "7007",
+    "url": "http://localhost:7007/graphql"
+  },
+  {
+    "name": "审核服务",
+    "projectName": "admin-audit-service",
+    "port": "7008"
+  },
+  {
+    "name": "消息服务",
+    "projectName": "admin-message-service",
+    "port": "7009"
+  },
+  {
+    "name": "国内增值服务",
+    "projectName": "admin-internal-charge-service",
+    "port": "7010"
+  },
+  {
+    "name": "增长后台",
+    "projectName": "admin-rise-service",
+    "port": "7015"
+  },
+  {
+    "name": "国内直播服务",
+    "projectName": "admin-internal-live-service",
+    "port": "7011"
+  },
+  {
+    "name": "国内 YY 语音服务",
+    "projectName": "admin-internal-yy-service",
+    "port": "7013"
+  },
+  {
+    "name": "智能营销服务",
+    "projectName": "admin-marketing-service",
+    "port": "7014"
+  },
+  {
+    "name": "国际审核后台",
+    "projectName": "admin-oversea-audit-service",
+    "port": "7018"
+  }
+]

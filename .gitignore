@@ -1,0 +1,16 @@
+.DS_store
+
+*.log
+*.deprecated
+libqconf.dylib
+
+logs
+node_modules
+
+.idea/
+dist/
+coverage/
+
+.vscode
+# misc
+.env.local

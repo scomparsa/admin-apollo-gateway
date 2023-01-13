@@ -1,0 +1,50 @@
+.access_branch_template: &access_branch
+  only:
+    - master
+    - dev
+
+variables:
+  project: admin-apollo-gateway
+  scripts: /data/yaml-shell
+  deploys: /home/work/admin-apollo-gateway
+  SCRIPTS_STORAGE: /home/gitlab-runner/runner-scripts
+
+stages:
+  - before_deploy
+  - deploy_dev
+  - deploy_prod
+
+before_deploy:
+  <<: *access_branch
+  stage: before_deploy
+  before_script:
+    - nvm use v12
+  script:
+    - bash $scripts/install.sh
+    - bash $SCRIPTS_STORAGE/lint-src.sh
+    - npm run build
+  artifacts:
+    name: "$CI_COMMIT_REF_SLUG"
+    expire_in: 1 week
+    paths:
+      - dist/
+
+deploy_dev:
+  stage: deploy_dev
+  when: on_success
+  script:
+    - bash $scripts/clean-deploy-node12.sh
+  environment:
+    name: development
+  only:
+    - dev
+
+deploy_prod:
+  stage: deploy_prod
+  when: on_success
+  script:
+    - bash $scripts/clean-deploy-node12.sh
+  environment:
+    name: production
+  only:
+    - master

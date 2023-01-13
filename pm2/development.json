@@ -1,0 +1,12 @@
+{
+  "name": "admin-apollo-gateway",
+  "cwd": "/home/work/admin-apollo-gateway",
+  "script": "./dist",
+  "log_date_format": "YYYY-MM-DD HH:mm Z",
+  "error_file": "/data/logs/pm2/admin-apollo-gateway/error.log",
+  "out_file": "/data/logs/pm2/admin-apollo-gateway/out.log",
+  "ignore_watch": ["node_modules"],
+  "exec_interpreter": "node@12.14.0",
+  "interpreter_args": "--harmony",
+  "exec_mode": "fork"
+}

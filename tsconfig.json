@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"module": "commonjs",
+    "moduleResolution": "node",
+		"noImplicitAny": true,
+		"outDir": "dist",
+		"paths": {
+      "@/*": ["./*"],
+			"*": [
+				"node_modules/*",
+				"types/*"
+			]
+		},
+		"pretty": true,
+    "resolveJsonModule": true,
+		"strictNullChecks": true,
+		"target": "esnext",
+		"typeRoots": [
+			"node_modules/@types"
+		]
+	},
+	"exclude": ["node_modules", "src/**/*.deprecated"],
+	"include": ["src/**/*"]
+}
